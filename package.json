@@ -1,0 +1,27 @@
+{
+  "name": "web4nft",
+  "version": "1.0.0",
+  "description": "Web4 Metadata Standard for NFTs 💿 useful as schema for Atomic Assets on EOSIO / Antelope blockchains WAX, EOS, Proton, UX ⛓️",
+  "main": "index.js",
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dougbutner/Geotemporal-NFT-Standard.git"
+  },
+  "keywords": [
+    "web4",
+    "nft",
+    "atomic",
+    "assets",
+    "atomic",
+    "nft"
+  ],
+  "author": "Douglas Butner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dougbutner/Geotemporal-NFT-Standard/issues"
+  },
+  "homepage": "https://github.com/dougbutner/Geotemporal-NFT-Standard#readme"
+}

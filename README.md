@@ -2,15 +2,33 @@
 
 by: [Douglas Butner](https://github.com/dougbutner)
 
-The tldr; is that this is a standard for creating NFTs that are compatible with [Web4]().
+**The tl;dr:** Web4 adds geography and time as mechainsms of curation. Using compatible attributes in your NFTs means your collections will be automatically compatible with [Web4](https://github.com/dougbutner/web-4).
 
 # Watch an [Instructional Video](https://www.youtube.com/watch?v=GXjBQnV_Xm8) on creating your NFT via metadata standards
 
-The cXc Music NFT Standard is a Future-positive standard used to create a [Atomic Assets schema]() that allows you to mint NFTs and make templates that are compatible with Web4 for any individual, collection, or application to make their own music NFT project. 
+The cXc Music NFT Standard is a Future-positive standard used to create a [Atomic Assets schema](https://github.com/pinknetworkx/atomicassets-contract/wiki/Quickstart-Guide) to mint NFTs and make templates that are compatible with Web4 for any individual, collection, or application to make their own music NFT project. 
 
-The benefits of using this schema include forward compatibility (Geotags) monetizing NFT plays with traditional platform players, infinite credits and links, and more.web
 
-**There's no coding skils required.** You'll also see the all the code below, ready for changes if you'd rather exclude traditional players, or add extra audio fields. You can even [make a music NFT from your phone.](https://www.youtube.com/watch?v=k0vt8v5iIn4)
+## The benefits of using Time and Geography in your NFT are: 
+- [x] Curation by place
+  - by putting up blinders to the rest of the world, web4 helps people support local-first so the best of the best can organically grow up the chain to the global stage.
+- [x] Curation by time
+  -  by tracking when votes happen, you can build more relevant displays that not only catch trends, they create and magnify them. 
+
+
+
+## The standard can be extended to
+- [x] Music NFTs
+- [x] Art NFTs
+- [x] Video NFTs
+- [x] Photography NFTs
+- [x] Other Collectibles
+- [x] Game Tokens
+- [x] anything you can think of
+
+
+
+**There's no coding skills required.** You can apply the schema through the atomichub UI manually (easier, slower), or copy and paste it directly when calling the  You can even [mint your NFT from your phone.](https://www.youtube.com/watch?v=k0vt8v5iIn4)
 
 This Schema exists within Atomic Asset's [NFT standard](https://github.com/pinknetworkx/atomicassets-contract) on the [atomicassets contract](https://wax.bloks.io/account/atomicassets).
 
@@ -100,9 +118,7 @@ Copy from this repo using the copy icon in the top-right of the code. Paste the 
 
 > ℹ️  Important  
 
-Using this schema does NOT mean that each template must have every field filled, 
-but you can only choose from fields in your future templates. You may add fields to the schema later, but not remove them. New fields will appear at the end, thus, best to modify this standard to your needs before deploying.
-
+Individual nfts/templates may leave fields blank, but the schema must have every field. You may add fields to the schema later, but not remove them. New fields will appear at the end, thus, best to modify this standard to your needs before deploying.
 
 # cXc Music Schema 🎸 
 > Merged with Simple version (This is the Simple Version)
@@ -114,9 +130,21 @@ but you can only choose from fields in your future templates. You may add fields
     "name": "name",
     "type": "string"
   },
+  {          
+    "name": "title",
+    "type": "string"
+  },
+  {
+    "name": "about",
+    "type": "string"
+  },
   {
     "name": "img",
-    "type": "image"
+    "type": "ipfs"
+  },
+    {
+    "name": "clip",
+    "type": "ipfs"
   },
   {
     "name": "audio",
@@ -127,63 +155,39 @@ but you can only choose from fields in your future templates. You may add fields
     "type": "ipfs"
   },
   {
-    "name": "clip",
+    "name": "backimg",
     "type": "ipfs"
   },
   {
-    "name": "backimg",
-    "type": "image"
-  },
-  {
     "name": "promo",
-    "type": "image"
+    "type": "ipfs"
   },
   {
     "name": "collectionimg",
-    "type": "image"
+    "type": "ipfs"
   },
-  {          
-    "name": "artist",
-    "type": "string"
-  },
-  {          
-    "name": "title",
+  {
+    "name": "timestamp",
     "type": "string"
   },
   {
-    "name": "album",
+    "name": "date",
     "type": "string"
-  },
-  {
-    "name": "track",
-    "type": "int64"
   },
   {
     "name": "year",
     "type": "string"
   },
-  {
-    "name": "about",
+    {
+    "name": "month",
+    "type": "string"
+  },
+    {
+    "name": "day",
     "type": "string"
   },
   {
-    "name": "credits",
-    "type": "string"
-  },
-  {
-    "name": "youtube",
-    "type": "string"
-  },
-  {
-    "name": "spotify",
-    "type": "string"
-  },
-  {
-    "name": "soundcloud",
-    "type": "string"
-  },
-  {
-    "name": "platforms",
+    "name": "location",
     "type": "string"
   },
   {
@@ -191,7 +195,11 @@ but you can only choose from fields in your future templates. You may add fields
     "type": "string"
   },
   {
-    "name": "locale",
+    "name": "state",
+    "type": "string"
+  },
+  {
+    "name": "city",
     "type": "string"
   },
   {
@@ -216,15 +224,15 @@ but you can only choose from fields in your future templates. You may add fields
 Use [this example](https://github.com/currentxchange/Music-NFT-Standard/blob/main/Template%20Example.md) to create a template you can use to drop your own Music NFTs using tools like [Atomichub](https://wax.atomichub.io/) and [Neftyblocks](https://neftyblocks.com/).
 
 
-# Modify this schema  🛠️
+# How To Modify this schema  🛠️
 
-Change any field you wish when making your own schema 
+Add new fields when modifying the schema, but try not to remove the ones there for maximum compatibility.
 
 Ideas:
 
 **Artist** - If you'd rather have your name here than in credits   
-**Multiple Audio fields** - Duplicate the audio fields to include all songs on an album (DYOR on marketplace support)   
-**Metadata** - Add custom metadata like the key, BPM, time, whatever you want   
+**Multiple Media fields** - Duplicate the audio fields to include all songs on an album (DYOR on marketplace support)   
+**More Metadata** - Add custom metadata like the key, BPM, genre, whatever you want   
 
 If you'd rather include all of your links in the Platform field, you can remove the Spotify, Soundcloud, and Youtube field. 
 
@@ -247,20 +255,8 @@ If you translate to another blockchain or NFT standard, please send a pull reque
 
 # Mini Change Log
 
-## 0.1.4
-Changed `year` to `released`
-Added Additional `clip` and img fields
-Changed `promo` description to suggest video + image 
-Merged Simple version, made Simple the only option. To use old version, change string to string[] ans use . This isn't recommended as there's little benefit and it's not usable through the Atomichub UI
-
-## 0.1.3
-Added `artist`, `year`, and `collectionimg`
-
-## 0.1.2
-Added `rarity` and `license`
-
-## 0.1.1
-Added `track` and `album`
+## 1.0.0
+Initial Release of the Standard
 
 
- <p align="center"> ~ Created with 💜  by <a href="https://cxc.world" alt="cXc.world Music Mapp">cXc.world</a> ~ <p>
+ <p align="center"> ~ Created with 💜 by <a href="https://cxc.world" alt="cXc.world Music Mapp">cXc</a> ~ <p>
