@@ -1,21 +1,20 @@
-# cXc Music NFT Standard 🎸
+# Web4 NFT Metadata Standard 🎸
 
-  Version: 0.1.4
-  Total Fields: 24
-  by: [cXc.world](https://cxc.world/)
+by: [Douglas Butner](https://github.com/dougbutner)
 
-# Watch the [Instructional Video](https://www.youtube.com/watch?v=GXjBQnV_Xm8) on creating your Music NFT (Works on WAX, EOS)
+The tldr; is that this is a standard for creating NFTs that are compatible with [Web4]().
 
+# Watch an [Instructional Video](https://www.youtube.com/watch?v=GXjBQnV_Xm8) on creating your NFT via metadata standards
 
-The cXc Music NFT Standard is a Music-Forward Atomic Assets data schema for any individual, collection, or application to make their own music NFT project. 
+The cXc Music NFT Standard is a Future-positive standard used to create a [Atomic Assets schema]() that allows you to mint NFTs and make templates that are compatible with Web4 for any individual, collection, or application to make their own music NFT project. 
 
-The benefits of using this schema include forward compatibility (Geotags) monetizing NFT plays with traditional platform players, infinite credits and links, and more.
+The benefits of using this schema include forward compatibility (Geotags) monetizing NFT plays with traditional platform players, infinite credits and links, and more.web
 
-There's no code required. You'll also see the all the code below, ready for changes if you'd rather exclude traditional players, or add extra audio fields. You can even [make a music NFT from your phone.](https://www.youtube.com/watch?v=k0vt8v5iIn4)
+**There's no coding skils required.** You'll also see the all the code below, ready for changes if you'd rather exclude traditional players, or add extra audio fields. You can even [make a music NFT from your phone.](https://www.youtube.com/watch?v=k0vt8v5iIn4)
 
 This Schema exists within Atomic Asset's [NFT standard](https://github.com/pinknetworkx/atomicassets-contract) on the [atomicassets contract](https://wax.bloks.io/account/atomicassets).
 
-Feel free to use or modify this schema for any purposes in accordance with the [license]().
+Feel free to use or modify this schema for any purposes in accordance with the [license](LICENSE).
 
 ## Check out our NFT collection using this standard [here](https://drops.cxc.world/)
 
@@ -87,9 +86,6 @@ Rarity is filterable on UIs like Atomichub and wax
 | released | string | Year recorded or first released |  
 | about | string | Description field with info about |  
 | credits | string | Array of song credits |  
-| youtube | string | Youtube URL |  
-| spotify | string | Spotify URL |  
-| soundcloud | string | Soundcloud URL |  
 | platforms | string | A list of all platforms the music can be found, and socials if desired |  
 | nation | string | Three-letter ISO (USA, BRA, AUS, etc) |  
 | locale | string | Local locales (State, County, City in USA) |  
