@@ -1,120 +1,133 @@
 # Web4 NFT Metadata Standard 🎸
 
-by: [Douglas Butner](https://github.com/dougbutner)
+by: [Douglas Butner](https://github.com/dougbutner/dougbutner) aka [Gudasol 🜛](https://ampl.ink/gudasol)
 
-**The tl;dr:** Web4 adds geography and time as mechainsms of curation. Using compatible attributes in your NFTs means your collections will be automatically compatible with [Web4](https://github.com/dougbutner/web-4).
+**The tl;dr:** Web4 incorporates geography and time as key primitives enabling futuristic algorithms. Using compatible attributes in your NFTs means your collections will be automatically compatible with [Web4](https://github.com/dougbutner/web-4).
+
+> Web 4 catalyzes free will by empowering collective decision making to manifest common goals and desires. Web4 strives to create systems that are public, provable, and powerful. These systems find use in curation, community, and consensus. - from [The Web4 Manifesto](https://github.com/dougbutner/web-4)
 
 # Watch an [Instructional Video](https://www.youtube.com/watch?v=GXjBQnV_Xm8) on creating your NFT via metadata standards
 
-The cXc Music NFT Standard is a Future-positive standard used to create a [Atomic Assets schema](https://github.com/pinknetworkx/atomicassets-contract/wiki/Quickstart-Guide) to mint NFTs and make templates that are compatible with Web4 for any individual, collection, or application to make their own music NFT project. 
+The cXc Music NFT Standard is a future-positive standard used to create an [Atomic Assets schema](https://github.com/pinknetworkx/atomicassets-contract/wiki/Quickstart-Guide) to mint NFTs and make templates that are compatible with Web4 for any individual, collection, or application to create their own music NFT project.
 
-
-## The benefits of using Time and Geography in your NFT are: 
-- [x] Curation by place
-  - by putting up blinders to the rest of the world, web4 helps people support local-first so the best of the best can organically grow up the chain to the global stage.
+## The benefits of using Time and Geography in your NFT are:
+- [x] Curation by location
+  - By putting up blinders to the rest of the world, Web4 helps people support local-first, so the best of the best can organically grow up the chain to the global stage.
 - [x] Curation by time
-  -  by tracking when votes happen, you can build more relevant displays that not only catch trends, they create and magnify them. 
-
-
+  - By tracking when votes happen, more relevant displays can be built that not only catch trends but also create and magnify them. Instead of showing the total views a video has, a web4 app would show the views of the video for that day (or any other span of time).
 
 ## The standard can be extended to
 - [x] Music NFTs
 - [x] Art NFTs
 - [x] Video NFTs
 - [x] Photography NFTs
+- [x] Tokenized Llama Farming
 - [x] Other Collectibles
-- [x] Game Tokens
-- [x] anything you can think of
+- [x] Anything you can think of
 
-
-
-**There's no coding skills required.** You can apply the schema through the atomichub UI manually (easier, slower), or copy and paste it directly when calling the  You can even [mint your NFT from your phone.](https://www.youtube.com/watch?v=k0vt8v5iIn4)
+**There's no coding skills required.** You can apply the schema through the AtomicHub UI manually (easier, slower) or copy and paste it directly when calling the action. You can even [mint your NFT from your phone](https://www.youtube.com/watch?v=k0vt8v5iIn4).
 
 This Schema exists within Atomic Asset's [NFT standard](https://github.com/pinknetworkx/atomicassets-contract) on the [atomicassets contract](https://wax.bloks.io/account/atomicassets).
 
-Feel free to use or modify this schema for any purposes in accordance with the [license](LICENSE).
-
-## Check out our NFT collection using this standard [here](https://drops.cxc.world/)
+Feel free to use or modify this schema for any purpose in accordance with the [license](LICENSE).
 
 
-# Summary 🗞️
-This standard includes:  
 
-Name of the NFT (Can be different than track title)
+# Quick Summary 🗞️
 
-One audio file   
-One video file   
-four images [Main, Back, Collection and Promo]   
+This standard includes:
 
-Title [If different than name]   
-Album name   
-Track # [If it's just one track]   
+###  NFT Metadata
+- Name
+- Title
+- About
+- License
+- Rarity
 
-Any number of custom credits   
-Any number of custom platform links   
+### IPFS media fields:
 
-ISO Country code  
-Readable locale   
-Pin as GeoJson Point   
+- img
+- clip
+- audio
+- video
+- backimg
+- promo
+- collectionimg
 
-License   
-Rarity   
+### Temporal fields:
+
+- Timestamp
+- Date
+- Year
+- Month
+- Day
+
+### Geographic fields:
+
+- Location
+- Nation
+- State
+- City
+- Geotag
+
+
 
 
 
 # Technical Summary ⚙️
-All media fields use IPFS.   
+All media fields use IPFS.
 
-All other info fields are strings (except "track" is int64)  
-
-String arrays are used to store unlimited Credits and Platform links.   
-Ex.  
-credits ["Band":"Boaty & The Boats","Bassist: Tim Leary", "Vocalist: Boaty McBoatface"]  
-platform ["youtube.com/v/gf75ja5","soundcloud.com/my/song"] or ["Soundcloud: soundcloud.com/my/song"]
-
-
-
-## Geo 🌍
-ISO country codes (ISO 3166-1 alpha-3)
-
-Locale string intended to be used in this format "City, County, State" or corresponding values for a given locality
-
-geotag is a GeoJson point stored as a string
-
-License is for codes like "CC-BY", or possibly declaring some priviledge grant upon receiving NFT. 
-
-Rarity is filterable on UIs like Atomichub and wax
-
-
+All other info fields are strings.
 
 | Field name | Type | Description | 
-| :----:  | :----: | :---- |
-| name | string | NFT name |  
-| img | string | Primary image / Cover image |  
-| audio | string | Audio file IPFS hash |  
-| video | string | Music video file IPFS hash |  
-| clip | string | Additional video file IPFS hash |  
-| backimg | string | Back cover of album / single |  
-| promo | string | Extra image or video for promo poster, QR code, etc |  
-| collectionimg | string | Extra image for Collection, optional |  
-| artist | string | The artist, if you prefer a separate field to putting with other credits | 
-| title | string | The actual title of the track |  
-| album | string | Title of the album |  
-| track | int64 | Number of the track on the album |  
-| released | string | Year recorded or first released |  
-| about | string | Description field with info about |  
-| credits | string | Array of song credits |  
-| platforms | string | A list of all platforms the music can be found, and socials if desired |  
-| nation | string | Three-letter ISO (USA, BRA, AUS, etc) |  
-| locale | string | Local locales (State, County, City in USA) |  
-| geotag | string | GeoJSON Point stored as string |  
-| license | string | Declare license if needed, (CC0, etc) |  
-| rarity | string | How scarce is this NFT? Abundant Common Uncommon Rare Epic Mythic Unique |  
+| :--------: | :--: | :---------: |
+| name       | string | NFT name as shown in marketplace |
+| title      | string | The actual title of the work, use if different from name field |
+| about      | string | Long Description of the NFT (Note you pay RAM for this, it isn't hashed) |
+| img        | ipfs   | Primary image / Cover image shown in marketplace (if left blank, video will usually show) |
+| clip       | ipfs   | Additional anything-goes IPFS hash |
+| audio      | ipfs   | Audio file IPFS hash |
+| video      | ipfs   | Music video file IPFS hash |
+| backimg    | ipfs   | Back cover of album / single |
+| promo      | ipfs   | Extra image or video for promo poster, QR code, etc |
+| collectionimg | ipfs | Image that represents the collection, optional |
+| timestamp  | string | Timestamp for the publication of the work (simplifies + supercedes date) |
+| date       | string | Date when the work was published (supercedes / replaces Year/Month/Day) Recommended format is ISO 8601 "YYYY-MM-DD" because "MM-DD-YYYY" can be confused with "DD/MM/YYYY" but it's up to you. To cover all bases, set timestamp field as a backup |
+| year       | string | Year when the work was published. Format: "YYYY". ⚠️ It's best to use either date or year/month/day, not both. |
+| month      | string | Month when the work was published. Format: "MM" or English abbreviation (e.g., "Jan", "Feb", etc.) or full month name |
+| day        | string | Day when the work was published. Format: "DD" or "D" |
+| location   | string | Full location information in one field, format: "City, State, Nation" |
+| nation     | string | Three-letter ISO country code (e.g., "USA", "BRA", "AUS", etc.) Please don't use anything else, as this is the easiest format for any application to integrate |
+| state      | string | State or province for the location, format: Abbreviation convention used in nation (e.g., California as "CA", Antioquia as "ANT") |
+| city       | string | City for the location, format: "City Name" |
+| geotag     | string | GeoJSON Point stored as string, format "lat,lng" (e.g., "37.7749,-122.4194"), or a "[lat,lng]" coordinate array (e.g., "[37.7749, -122.4194]") |  
+| credits    | string | Cridit collaborators, suggested format "Credit: Name, Credit Two: Name Two" |  
+| license    | string | Declare license identifier for work on NFT, (Copyright, CC0, MIT, etc) |  
+| rarity     | string | How scarce is this NFT? Abundant Common Uncommon Rare Epic Mythic Unique |  
 
+
+# Caveats and Notes 📝
+This standard has more time and geographic fields than any single collection should need, but that's okay.
+
+🔑 Ensure you pick the best formats for geography and time for your needs AND future usability of third-parties. 
+
+- Both the geographic and time fields have multiple routes, pick one and use it for the entire schema/collection 
+  - Consider your use case carefully. Next consider future-proofness, and remember, all fields are optional.
+- You should use either the date field or the year/month/day fields, not both. Timestamp is the most accurate, but it may not be easily understandable without decoding in a user interface
+- Similarly, you should consider using `location` or `nation` & `state` & `city`, but may not need both. If using Location or Geotag as the primary geographic/geopolitical field, consider also including the three-letter country name, as it's very easy for apps to integrate.
 
 # To use this Standard 
 
-Copy from this repo using the copy icon in the top-right of the code. Paste the following array into the `idata` field using the Atomic Assets [createschema](https://wax.bloks.io/account/atomicassets?loadContract=true&tab=Actions&account=atomicassets&scope=atomicassets&limit=100&action=createschema) action to create your own schema on Atomic Assets, and then create [template](https://wax.bloks.io/account/atomicassets?loadContract=true&tab=Actions&account=atomicassets&scope=atomicassets&limit=100&action=createtemp) from the schema for each NFT you release. You'll find that [here](https://github.com/currentxchange/Music-NFT-Standard/blob/main/Template%20Example.md). Because this standard uses the `string[]` (string array) type, it's currently **not possible** to use directly on [Atomichub.io](https://wax.atomichub.io/) UI, but should be in the future. For this reason, some projects (like [CAIT Drops](https://www.caittoken.io/CAIT-Drops/)) choose to implement the standard manually through the UI. *note field names must match case-sensitive to function*
+## The Easy Way
+
+Use the user interface on Atomic Assets to:
+
+1: [Create a Collection](https://wax.atomichub.io/creator)
+2: Create a Schema by adding each field (replace your collection name in the URL): https://wax.atomichub.io/creator/collection/YOURCOLLECTIONNAME/create-schema
+3: Select the new schema when making templates and minting NFTs.
+
+## The Hard Way (Quicker, not that hard)
+Copy the code provided in the code block below. Paste the following array into the `idata` field using the Atomic Assets [createschema](https://wax.bloks.io/account/atomicassets?loadContract=true&tab=Actions&account=atomicassets&scope=atomicassets&limit=100&action=createschema) action to create your own schema on Atomic Assets, and then create [template](https://wax.bloks.io/account/atomicassets?loadContract=true&tab=Actions&account=atomicassets&scope=atomicassets&limit=100&action=createtemp) from the schema for each NFT you release. 
 
 > ℹ️  Important  
 
@@ -207,6 +220,10 @@ Individual nfts/templates may leave fields blank, but the schema must have every
     "type": "string"
   },
   {
+    "name": "credits",
+    "type": "string"
+  },
+  {
     "name": "license",
     "type": "string"
   },
@@ -220,42 +237,35 @@ Individual nfts/templates may leave fields blank, but the schema must have every
 
 
 
-# Create a Template  🛠️ 🖼️. 
-Use [this example](https://github.com/currentxchange/Music-NFT-Standard/blob/main/Template%20Example.md) to create a template you can use to drop your own Music NFTs using tools like [Atomichub](https://wax.atomichub.io/) and [Neftyblocks](https://neftyblocks.com/).
-
-
 # How To Modify this schema  🛠️
 
-Add new fields when modifying the schema, but try not to remove the ones there for maximum compatibility.
+When modifying the schema, you can add new fields, but avoid removing existing ones to ensure maximum compatibility.
 
 Ideas:
 
 **Artist** - If you'd rather have your name here than in credits   
-**Multiple Media fields** - Duplicate the audio fields to include all songs on an album (DYOR on marketplace support)   
+**Multiple Media fields** - Duplicate the audio fields to include all songs on an album, etc (First DYOR on marketplace support) 
+**Youtube** - Youtube is supported on Atomichub and other marketplaces, leading to an embeded video.   
 **More Metadata** - Add custom metadata like the key, BPM, genre, whatever you want   
 
-If you'd rather include all of your links in the Platform field, you can remove the Spotify, Soundcloud, and Youtube field. 
-
-Removing Youtube will also disable Youtube player from showing up on Atomichub and likely other marketplaces.
 
 
 # Power of the Schema ✨ 🧙‍♂️
-Using this template insures maximum forward-compatibility with [music.cXc.world](https://music.cxc.world)
+Using this template ensures maximum forward-compatibility with geotemporal "mapps" (Map dApps) like [cXc.world](https://music.cxc.world)
 
-There is no magical benefit (yet) of using this standard, just practical ones. Youtube plays can bring extra revenue, as will the links to other players. You may credit all involved, and geographic data opens up new use cases for your NFT.  
+There is a **magical benefit** of this standard in development. Soon [cXc.world](https://music.cxc.world) will track those using this schema in their templates, and automatically generate mapps based on the info on the NFT. For best results, always incluse the ISO country code (three letters).
 
-In the future it's possible a mapp / dapp (like cXc) to allow users to register their own schemas that adhere to this standard, creating a Music-NFT exclusive platform that doesn't rely on accounts or collection names alone. 
-
+We will continue to release tools to help others create geographically and temporally aware dApps
 
 # Evolution of the Schema 🚀 🛸
 
 This schema will grow and evolve. Feel free to open issues on this repo with your suggestions.  
 
-If you translate to another blockchain or NFT standard, please send a pull request adding a file named <chain>.md in the main directory containing the code needed to deploy, or open an issue with the code and I can update the repo if you prefer. 
+If you adapt this schema for another blockchain or NFT standard, please submit a pull request adding a file named <chain>.md in the main directory, containing the necessary deployment code. Alternatively, you can open an issue with the code, and I can update the repository if you prefer.
 
 # Mini Change Log
 
-## 1.0.0
+## 1.0.0 - May 1, 2023
 Initial Release of the Standard
 
 
