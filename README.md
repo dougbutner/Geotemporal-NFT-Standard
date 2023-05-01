@@ -269,4 +269,8 @@ If you adapt this schema for another blockchain or NFT standard, please submit a
 Initial Release of the Standard
 
 
+# Pomelo Supporters 🍊
+
+Special Thanks to: dansingjoy, mods, markstair, keyes, eosnames, monstredd, ronshek, estebansaa, apporc, martinbreuer, soa432, earthman, eostrace, chuck, hernanarber, dphillippi, denis, stephb, jun, lovejoy, crabnetwork, mikelennie, merivercap, anasalharbi5, donsonzeng, lanhange, joshuaseymour
+
  <p align="center"> ~ Created with 💜 by <a href="https://cxc.world" alt="cXc.world Music Mapp">cXc</a> ~ <p>
