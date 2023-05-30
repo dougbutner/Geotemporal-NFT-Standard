@@ -1,7 +1,7 @@
 {
   "name": "web4nft",
-  "version": "1.0.0",
-  "description": "Web4 Metadata Standard for NFTs 💿 Geographic + Time-aware NFT metadata schema for Atomic Assets on EOSIO / Antelope blockchains WAX, EOS, Proton, UX ⛓️",
+  "version": "1.0.1",
+  "description": "Web4NFT Metadata Standard for Atomic Assets 💿 Geographic + Time-aware NFT schema on EOSIO / Antelope blockchains WAX, EOS, Proton, UX ⛓️",
   "main": "index.js",
   "scripts": {
     "test": "none"

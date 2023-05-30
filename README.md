@@ -1,6 +1,6 @@
 # Web4 NFT Metadata Standard 🎸
 
-by: [Douglas Butner](https://github.com/dougbutner/dougbutner) aka [Gudasol 🜛](https://ampl.ink/gudasol)
+by: [Douglas Butner](https://github.com/dougbutner) aka [Gudasol 🜛](https://ampl.ink/gudasol)
 
 **The tl;dr:** Web4 incorporates geography and time as key primitives enabling futuristic algorithms. Using compatible attributes in your NFTs means your collections will be automatically compatible with [Web4](https://github.com/dougbutner/web-4).
 
@@ -8,7 +8,7 @@ by: [Douglas Butner](https://github.com/dougbutner/dougbutner) aka [Gudasol 🜛
 
 # Watch an [Instructional Video](https://www.youtube.com/watch?v=GXjBQnV_Xm8) on creating your NFT via metadata standards
 
-The cXc Music NFT Standard is a future-positive standard used to create an [Atomic Assets schema](https://github.com/pinknetworkx/atomicassets-contract/wiki/Quickstart-Guide) to mint NFTs and make templates that are compatible with Web4 for any individual, collection, or application to create their own music NFT project.
+The Web4 NFT Standard is a future-positive standard used to create an [Atomic Assets schema](https://github.com/pinknetworkx/atomicassets-contract/wiki/Quickstart-Guide) to mint NFTs and make templates that are compatible with Web4 for any individual, collection, or application to create their own tokenized project.
 
 ## The benefits of using Time and Geography in your NFT are:
 - [x] Curation by location
@@ -75,7 +75,7 @@ This standard includes:
 
 
 # Technical Summary ⚙️
-All media fields use IPFS.
+All media fields use IPFS. This is stored as text. 
 
 All other info fields are strings.
 
@@ -87,7 +87,7 @@ All other info fields are strings.
 | img        | ipfs   | Primary image / Cover image shown in marketplace (if left blank, video will usually show) |
 | clip       | ipfs   | Additional anything-goes IPFS hash |
 | audio      | ipfs   | Audio file IPFS hash |
-| video      | ipfs   | Music video file IPFS hash |
+| video      | ipfs   | Primary Video file IPFS hash |
 | backimg    | ipfs   | Back cover of album / single |
 | promo      | ipfs   | Extra image or video for promo poster, QR code, etc |
 | collectionimg | ipfs | Image that represents the collection, optional |
@@ -133,8 +133,7 @@ Copy the code provided in the code block below. Paste the following array into t
 
 Individual nfts/templates may leave fields blank, but the schema must have every field. You may add fields to the schema later, but not remove them. New fields will appear at the end, thus, best to modify this standard to your needs before deploying.
 
-# cXc Music Schema 🎸 
-> Merged with Simple version (This is the Simple Version)
+# 🛠 Web4NFT Metadata Standard
 > Works with Atomichub UI out of the box. You can even avoid touching this code by using Create Schema on atomichub to replicate. 
 
 ```javascript
@@ -246,7 +245,7 @@ Ideas:
 **Artist** - If you'd rather have your name here than in credits   
 **Multiple Media fields** - Duplicate the audio fields to include all songs on an album, etc (First DYOR on marketplace support) 
 **Youtube** - Youtube is supported on Atomichub and other marketplaces, leading to an embeded video.   
-**More Metadata** - Add custom metadata like the key, BPM, genre, whatever you want   
+**More Metadata** - Add custom metadata specific to your field  
 
 
 
