@@ -54,6 +54,9 @@ This standard includes:
 - promo
 - collectionimg
 
+### IPFS media fields:
+- youtube
+
 ### Temporal fields:
 
 - Timestamp
@@ -88,6 +91,7 @@ All other info fields are strings.
 | clip       | ipfs   | Additional anything-goes IPFS hash |
 | audio      | ipfs   | Audio file IPFS hash |
 | video      | ipfs   | Primary Video file IPFS hash |
+| youtube    | text   | Youtube link, player shows up on Atomichub |
 | backimg    | ipfs   | Back cover of album / single |
 | promo      | ipfs   | Extra image or video for promo poster, QR code, etc |
 | collectionimg | ipfs | Image that represents the collection, optional |
@@ -165,6 +169,10 @@ Individual nfts/templates may leave fields blank, but the schema must have every
   {
     "name": "video",
     "type": "ipfs"
+  },
+  {
+    "name": "youtube",
+    "type": "text"
   },
   {
     "name": "backimg",
@@ -263,6 +271,9 @@ This schema will grow and evolve. Feel free to open issues on this repo with you
 If you adapt this schema for another blockchain or NFT standard, please submit a pull request adding a file named <chain>.md in the main directory, containing the necessary deployment code. Alternatively, you can open an issue with the code, and I can update the repository if you prefer.
 
 # Mini Change Log
+
+## 1.0.1 - Jun 20, 2023
+Added Youtube field
 
 ## 1.0.0 - May 1, 2023
 Initial Release of the Standard
