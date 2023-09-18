@@ -172,7 +172,7 @@ Individual nfts/templates may leave fields blank, but the schema must have every
   },
   {
     "name": "youtube",
-    "type": "text"
+    "type": "string"
   },
   {
     "name": "backimg",
